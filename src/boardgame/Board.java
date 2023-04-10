@@ -11,7 +11,7 @@ public class Board {
 		pieces = new Piece[row][column];
 	}
 
-	// GETTERS AND SETTERS //////////////////
+// GETTERS AND SETTERS //////////////////
 	
 	public int getRows() {
 		return rows;
@@ -29,13 +29,15 @@ public class Board {
 		this.columns = columns;
 	}
 
+// METHODS ////////////////////////////
 
 
-
-
-
+	public Piece piece(int row, int column) {
+		return pieces[row][column];
+	}
+	
 	public Piece piece(Position position) {
-		
+		return pieces[position.getRow()][position.getColumn()];
 	}
 	
 	public void placePiece(Piece piece, Position position) {
